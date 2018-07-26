@@ -35,7 +35,6 @@ update() {
 }
 
 
-
 class Contact {
     constructor(name, relation, email, phone) {
         this.name = name;
@@ -65,15 +64,18 @@ while (true) {
     } else if (response === "delete") {
         let deleteName = prompt("Would you like to delete by name or index")
         if (deleteName === "name") {
+            let name = prompt("Who would you like to delete?")
             addressbook.deleteByName(name);
-        } else if (deleteName === "index") {
-            addressbook.deleteAt(index);
-        } else if (response === "print") {
-            addressBook.print();
-        } else if (response === quit) {
-            console.log(Farewell);
-            break;
         }
-
+    } else if (deleteName === "index") {
+        let index = prompt('Which index would you like to delete?');
+        for (let i = 0; 1 < index; i++) {}
+        addressbook.deleteAt(index);
+    } else if (response === "print") {
+        addressBook.print();
+    } else if (response === quit) {
+        console.log(Farewell);
+        break;
     }
+
 }
