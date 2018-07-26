@@ -11,19 +11,28 @@ class AddressBook {
 
     deleteAt(index) {
         const removeContacts = () => {
-
             contacts.splice(contacts.indexOf(index), 1);
             console.log(contacts);
         };
     }
 
-    printAll() {
-        for (let i = 0; i < AddressBook.length; i++) {
-            console.log(AddressBook[i]);
-        }
-    }
+    deleteByName(name) {
+        const removeContacts = () => {
+            this.contacts.splice(contacts.name), 1);
+        console.log(this.contacts);
+    };
 }
 
+printAll() {
+    for (let i = 0; i < AddressBook.length; i++) {
+        console.log(AddressBook[i]);
+    }
+
+    update() {
+        AddressBook[i];
+    }
+}
+}
 
 
 
@@ -36,6 +45,7 @@ class Contact {
     }
 }
 const book = new AddressBook();
+book.add(new Contact());
 console.log(book);
 
 // book.DeleteAt(new Contact(0));
@@ -45,6 +55,18 @@ console.log(book);
 while (true) {
     let answer = prompt("Would you like to add, delete, print, or quit?")
     if (answer === "add") {
-        book.add(new Contact());
+        let info = {
+            name: prompt("What is your name?"),
+            relation: prompt("Relation?"),
+            email: prompt("What is your email?"),
+            phone: prompt("What is your phone number?"),
+        };
+        book.add(info);
+    } else if (response === "delete") {
+        let deleteName = prompt("Would you like to delete by name or indext") {
+            if (deleteName === "name") {
+
+            }
+        }
     }
 }
