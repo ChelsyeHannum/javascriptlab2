@@ -27,11 +27,11 @@ printAll() {
     for (let i = 0; i < AddressBook.length; i++) {
         console.log(AddressBook[i]);
     }
-
-    update() {
-        AddressBook[i];
-    }
 }
+update() {
+    AddressBook[i];
+}
+
 }
 
 
@@ -63,10 +63,17 @@ while (true) {
         };
         book.add(info);
     } else if (response === "delete") {
-        let deleteName = prompt("Would you like to delete by name or indext") {
-            if (deleteName === "name") {
-
-            }
+        let deleteName = prompt("Would you like to delete by name or index")
+        if (deleteName === "name") {
+            addressbook.deleteByName(name);
+        } else if (deleteName === "index") {
+            addressbook.deleteAt(index);
+        } else if (response === "print") {
+            addressBook.print();
+        } else if (response === quit) {
+            console.log(Farewell);
+            break;
         }
+
     }
 }
